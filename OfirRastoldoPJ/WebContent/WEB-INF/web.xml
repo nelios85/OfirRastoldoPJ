@@ -9,7 +9,7 @@
 
 	<!-- Página Principal -->
 	<welcome-file-list>
-		<welcome-file>faces/pages/index.xhtml</welcome-file>
+		<welcome-file>faces/pages/principal.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<!-- Configuração do JSF -->
@@ -26,6 +26,6 @@
 	<!--  Definição do Tema do PrimeFaces -->
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
-		<param-value>blitzer</param-value>
+		<param-value>afterwork</param-value>
 	</context-param>
 </web-app>
