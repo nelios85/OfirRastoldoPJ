@@ -10,21 +10,15 @@
 	<ui:define name="menu">
 		<ui:include src="/includes/menuPrincipal.xhtml" />
 	</ui:define>
-
+	
 	<ui:define name="conteudo">
-		<div class="col-md-12">
-			Bem Vindo
-			<h:outputText value="Usuário" />
-
-			<div class="col-md-12">
-				<h:form>
-					<p:panelGrid columns="1">
-						<h:commandLink value="Cadastrar novos Usuários" />
-						<h:commandLink value="Cadastrar novos Parceiros" />
-					</p:panelGrid>
-				</h:form>
-			</div>
-		</div>
+		<p:layoutUnit position="center">
+			<p:breadCrumb>
+				<p:menuitem value="" url="#" />
+			</p:breadCrumb>
+			<ui:insert name="conteudo" />
+		</p:layoutUnit>
 	</ui:define>
+
 
 </ui:composition>
