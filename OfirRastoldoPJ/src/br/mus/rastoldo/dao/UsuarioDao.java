@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import org.apache.shiro.crypto.hash.SimpleHash;
+
 import br.mus.rastoldo.factory.ConexaoFactory;
 import br.mus.rastoldo.model.Usuario;
 
@@ -25,6 +27,8 @@ public class UsuarioDao {
 		comando.setString(2, usuario.getSobrenome());
 		comando.setString(3, usuario.getEmail());
 		comando.setString(4, usuario.getSenha());
+		SimpleHash hash = new SimpleHash("md5", usuario.getSenha());
+		usuario.setSenha(hash.toHex());
 		
 		comando.executeUpdate();
 	}
